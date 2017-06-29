@@ -1,0 +1,82 @@
+.widget h3 {
+	font-size: 1.3em;
+	line-height: 1.46em;
+}
+
+.widget a:link,
+.widget a:visited,
+.widget a:active {
+	color: white;
+}
+.widget ul a {
+	text-decoration: none;
+}
+
+.widgetTitle a:after {
+	content: '';
+}
+
+.widget_text {
+  border-radius: 0.125rem;
+  color: #f4f4f4;
+}
+.widget_text span {
+  color: #f4f4f4;
+}
+
+.widget_text .widgetTitle {
+  display: none;
+}
+.widget_text a {
+  color: #f4f4f4;
+  display: block;
+  font-size: 1em;
+  font-weight: normal;
+  padding: 1em;
+}
+
+.sidebar .widget a:hover {
+  color: white;
+}
+.widget_text h2 {
+  margin-bottom: 0;
+  border: none;
+  font-weight: 500;
+  font-family: $benton-sans;
+  color: #f4f4f4;
+  font-size: 1em;
+  line-height: 1.6;
+  border-bottom: 2px solid white;
+}
+.widget_text p {
+  margin-bottom: 0;
+}
+.textwidget > div {
+  background: linear-gradient(to right, transparentize(darkgreen, 0.5), darkgreen);
+}
+.textwidget > div:hover {
+  background: linear-gradient(to left, transparentize(darkgreen, 0.5), darkgreen);
+}
+.textwidget > div a {
+  overflow: hidden;
+}
+.textwidget > .brochure a {
+  padding-left: 95px;
+  position: relative;
+  min-height: 129px;
+}
+.textwidget > .brochure a:before {
+  content: "";
+  background: url("/evergreen/files/2017/04/evergreen-brochure.jpg") 0 0 no-repeat;
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  width: 65px;
+  height: 97px;
+}
+
+.widget_text .thickbox {
+	display: inline-block;
+	font-size: 0;
+	box-shadow: 0 0 4px 1px grey;
+}
