@@ -1,0 +1,9 @@
+.primaryNav-menu li a {
+  font-family: $benton-sans;
+  font-weight: 500;
+}
+.primaryNav {
+  @include print {
+    display: none;
+  }
+}

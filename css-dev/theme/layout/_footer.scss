@@ -1,40 +1,41 @@
-.siteFooter-social ul li a {
-  color: white;
-  display: inline-block;
-  background-color: #CC0000;
-  border-radius: 50%;
-  height: 32px;
-  width: 32px;
-  line-height: 32px;
-  text-align: center;
+.siteFooter a {
+  display: block;
 }
-
-.siteFooter-social i {
-  font-size: 16px;
-}
-
-.siteFooter-social {
+.site-footer-brand + .siteFooter-content {
   @include breakpoint($SM) {
-    width: auto !important;
+    margin-left: 0;
   }
 }
-.siteFooter-content {
+.site-footer-brand {
   @include breakpoint($SM) {
-    margin-left: 0 !important;
+    display: none;
   }
 }
-.siteFooter-links {
-  padding-left: 0 !important;
-	text-align: center;
-  
+.has-links .siteFooter-links li {
+  display: block;
   @include breakpoint($SM) {
-    width: auto !important;
+    display: inline-block;
   }
 }
-#siteFooter-social-menu {
-  display: inline-block;
-  min-width: 200px;
+.has-links .siteFooter-links li:not(:last-child) {
+  border-bottom: 1px solid;
+  @include breakpoint($SM) {
+    border: none;
+  }
 }
-footer.has-branding {
-	min-height: auto;
+.has-links .siteFooter-links li a {
+  padding: 0.25em 0;
+  @include breakpoint($SM) {
+    padding: 0;
+  }
+}
+.siteFooter {
+  @include print {
+    display: none;
+  }
+}
+body {
+  @include print() {
+    background-color: transparent;
+  }
 }

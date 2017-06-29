@@ -4,3 +4,8 @@
 .sidebar a:hover {
   text-decoration: underline;
 }
+.sidebar {
+  @include print {
+    display: none;
+  }
+}
