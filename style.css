@@ -71,11 +71,14 @@ a.button {
   src: url("https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.eot?#iefix") format("embedded-opentype"), url("https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.woff") format("woff"), url("https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.ttf") format("truetype"), url("https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.svg#bu-default-icons") format("svg");
   font-style: normal;
   font-weight: 400; }
-.widget_bu_pages .widgetTitle a:hover:after, .sidebar #contentnav li a:hover:after {
+.widget_bu_pages .widgetTitle a:hover:after, .sidebar #contentnav li a:hover:after, .widget .cta.download:before {
   font-family: "BU-Default-Icons"; }
 
 .widget_bu_pages .widgetTitle a:hover:after, .sidebar #contentnav li a:hover:after {
   content: "\25BB"; }
+
+.widget .cta.download:before {
+  content: "\1F4C4"; }
 
 /* ----------------------------------------------------------------------------------------------------------------*/
 /* ---------->>> global settings needed for thickbox <<<-----------------------------------------------------------*/
@@ -273,12 +276,6 @@ a.button {
     text-indent: -9999em;
     width: 112px; } }
 
-.sidebar a {
-  text-decoration: none; }
-
-.sidebar a:hover {
-  text-decoration: underline; }
-
 @media print {
   .sidebar {
     display: none; } }
@@ -341,88 +338,74 @@ a.button {
   color: black !important;
   text-decoration: none; }
 
-.widget h3 {
-  font-size: 1.3em;
-  line-height: 1.46em; }
-
 .widget a:link,
 .widget a:visited,
 .widget a:active {
   color: white; }
 
-.widget ul a {
+.widget .cta {
+  background: linear-gradient(to right, rgba(0, 100, 0, 0.5), darkgreen);
+  background-size: 100%;
+  display: block;
+  padding: 1em;
+  transition: 0.2s background-size ease-in-out;
   text-decoration: none; }
 
-.widgetTitle a:after {
-  content: ''; }
-
-.widget_text {
-  border-radius: 0.125rem;
-  color: #f4f4f4; }
-
-.widget_text span {
-  color: #f4f4f4; }
-
-.widget_text .widgetTitle {
+.sidebar .widget .widgetTitle {
   display: none; }
 
-.widget_text a {
-  color: #f4f4f4;
-  display: block;
-  font-size: 1em;
-  font-weight: normal;
-  padding: 1em; }
+.sidebar .widget .cta:hover {
+  color: white;
+  background-size: 150%; }
 
-.sidebar .widget a:hover {
-  color: white; }
-
-.widget_text h2 {
-  margin-bottom: 0;
-  border: none;
-  font-weight: 500;
-  font-family: "Benton-Sans", "Helvetica Neue", "Helvetica", sans-serif;
-  color: #f4f4f4;
-  font-size: 1em;
+.widget .cta p {
+  font-size: 14px;
   line-height: 1.6;
-  border-bottom: 2px solid white; }
-
-.widget_text p {
   margin-bottom: 0; }
 
-.textwidget > div {
-  background: linear-gradient(to right, rgba(0, 100, 0, 0.5), darkgreen); }
-
-.textwidget > div:hover {
-  background: linear-gradient(to left, rgba(0, 100, 0, 0.5), darkgreen); }
-
-.textwidget > div a {
-  overflow: hidden; }
-
-.textwidget > .brochure a {
-  padding-left: 95px;
+.widget .cta.download {
   position: relative;
-  min-height: 129px; }
+  padding-left: 4em; }
 
-.textwidget > .brochure a:before {
-  content: "";
-  background: url("/evergreen/files/2017/04/evergreen-brochure.jpg") 0 0 no-repeat;
+.widget .cta.download:before {
+  height: 50px;
+  font-size: 2em;
   position: absolute;
-  top: 1em;
-  left: 1em;
-  width: 65px;
-  height: 97px; }
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 0.5em; }
 
-.widget_text .thickbox {
+.widget .cta h2 {
+  border: none;
+  color: #F4F4F4;
+  font-family: "Benton-Sans", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 1.3em;
+  font-weight: 500;
+  line-height: 1.6;
+  margin-bottom: 0.25em; }
+
+.widgetTitle a:after {
+  content: none; }
+
+.widget .thickbox {
   display: inline-block;
   font-size: 0;
   box-shadow: 0 0 4px 1px grey; }
 
-.widget_bu_pages .widgetTitle a {
+.sidebar .widget.widget_bu_pages .widgetTitle {
+  display: block; }
+
+.sidebar .widget.widget_bu_pages .widgetTitle a {
   display: block;
   padding: 0 0.25em; }
 
+.widget_bu_pages a {
+  text-decoration: none; }
+
 .widget_bu_pages .widgetTitle a:hover:after {
-  float: right; }
+  float: right;
+  font-size: 0.6em; }
 
 .widget_bu_pages .widgetTitle a:hover {
   color: inherit;

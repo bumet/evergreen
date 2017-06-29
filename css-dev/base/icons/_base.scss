@@ -17,3 +17,7 @@
   @extend %icon;
   content: "\25BB";
 }
+%icon-file:before {
+  @extend %icon;
+  content: "\1F4C4";
+}
